@@ -1,0 +1,36 @@
+.nav-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 0 12px;
+    height: 100px;;
+    align-items: center;
+    margin: 0;
+    color: white;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 45px;
+}
+.Clicker-logo{
+width: 100px;
+}
+.btn-content{
+    background-color: green;
+    height: 80px;
+    width: 250px;
+    color: white;
+    font-size: 34px;
+    border: white solid 1px;
+
+    border-radius: 35px;
+}
+.added-content{
+    color: white;
+    background-color: green;
+}
