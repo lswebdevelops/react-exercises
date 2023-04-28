@@ -3,22 +3,34 @@ import './App.css';
 import React from 'react';
 
 function App() {
-  const  [isImportant, setIsImportant] = React.useState("Yes");
+  const  [isImportant, setIsImportant] = React.useState(0);
   
 
-  function handleClick(){
+  function handleClickUp(){
     // setIsImportant is a function
     //const [isImportant, f]
-    setIsImportant("No")
+    setIsImportant(isImportant + 1)
+    
+  }
+  function handleClickDown(){
+    // setIsImportant is a function
+    //const [isImportant, f]
+    setIsImportant(isImportant - 1)
     
   }
   return (
     <div className="App">
-      <h1> Is state important to know? </h1>
-      <div className='h1.content'>
+      
+      <div className='number-container'>
+        <p 
+         onClick={handleClickDown}
+        
+        className='pminus'>-</p>
         <h1
-        onClick={handleClick}
-         className='yesH1'>{isImportant}</h1>
+         className='number-content'>{isImportant}</h1>
+         <p 
+         onClick={handleClickUp}
+         className='pplus'>+</p>
       </div>
       
     </div>
