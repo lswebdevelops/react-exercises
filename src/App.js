@@ -3,34 +3,43 @@ import './App.css';
 import React from 'react';
 
 function App() {
-  const  [isImportant, setIsImportant] = React.useState(0);
+  const  [count, setcount] = React.useState(0);
   
 
   function handleClickUp(){
-    // setIsImportant is a function
-    //const [isImportant, f]
-    setIsImportant(isImportant + 1)
+   
+    // setcount(function(){
+    //   return count +1;
+    // })
+    setcount(function(oldValue){
+      return oldValue +1;
+    })
     
   }
   function handleClickDown(){
-    // setIsImportant is a function
-    //const [isImportant, f]
-    setIsImportant(isImportant - 1)
+    
+    // setcount(function(){
+    //   return count - 1;
+    // })
+    setcount(function(oldValue){
+      return oldValue - 1;
+    })
+    
     
   }
   return (
     <div className="App">
       
       <div className='number-container'>
-        <p 
+        <button 
          onClick={handleClickDown}
         
-        className='pminus'>-</p>
-        <h1
-         className='number-content'>{isImportant}</h1>
-         <p 
+        className='pminus'>-</button>
+        <button
+         className='number-content'>{count}</button>
+         <button 
          onClick={handleClickUp}
-         className='pplus'>+</p>
+         className='pplus'>+</button>
       </div>
       
     </div>

@@ -1,5 +1,5 @@
 .App{
-  padding-top: 45px;
+  padding-top: 95px;
 }
 .number-container{
   display: flex;
@@ -9,6 +9,9 @@
 
 
 }
+button{
+  border: none;
+}
 .number-content{
   width: 100px;
   height: 100px;
@@ -16,8 +19,7 @@
   background-color: white;
   text-align: center;
   font-size: 50px;
-  margin-top: 4px;
-  line-height: 92px;
+  margin-top: -65px;
 }
 
 .pplus, .pminus{
@@ -26,6 +28,5 @@
   height: 50px;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
   font-size: 40px;;
 }
