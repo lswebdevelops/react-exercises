@@ -5,3 +5,19 @@
   
   ;
 }
+.h1.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.yesH1{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: white;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 4px;
+  line-height: 92px;
+}
