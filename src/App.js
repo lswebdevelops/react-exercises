@@ -1,15 +1,28 @@
+
+import Count from './Components/Count'
 import './App.css';
-// import Clicker from './Components/Clicker.jsx';
 import React from 'react';
-import Clicker from './Components/Clicker';
-
 function App() {
-return(
-  <div>
-     <Clicker />
-  </div>
-)
+  const  [count, setcount] = React.useState(0);
+  
+  function handleCountUp(){
+  
+   setcount(prevCount => prevCount +1)
+  }
+  function handleCountDown(){
+    setcount(prevCount => prevCount -1)
 
+  }
+  return (
+    <div className="App">
+      
+      <div className='number-container'>
+        <button onClick={handleCountDown} className='pminus'>-</button>
+        <Count number={count}/>
+        <button  onClick={handleCountUp} className='pplus'>+</button>
+      </div>
+      
+    </div>
+  );
 }
-
 export default App;
