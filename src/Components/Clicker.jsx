@@ -1,37 +1,37 @@
 import React from "react";
-
+import logo from '../logo.svg';
 import '../Styles/Clicker.css';
-
 function Clicker(){
+  
+  const [thingsArray, setThingsArray] = React.useState(["Things1"])
 
-   function greeting(name){
-      const date = new Date();
-      const hours = date.getHours(); 
-      let timeOfDay = "";
-      if (hours >= 4 && hours < 12) {
-        timeOfDay = "Morning";
-      } else if (hours >= 12 && hours < 17) {
-        timeOfDay = "Afternoon";
-      } else if (hours >= 17 && hours < 20) {
-        timeOfDay = "Evening";
-      } else {
-        timeOfDay = "Night";
-      }
-      return `Good ${timeOfDay}, ${name}!`
-   }
-console.log(greeting("Davi"));
-   
-   
-   
-   return(
-      <button
-     className="btn-content"
+  function addItem(){
+    setThingsArray(previousItem =>{
+      return[...previousItem, `Things${previousItem.length + 1}`]
+    })
+  }
 
-     onClick={greeting}
+  const elementsArray = thingsArray.map(thing =>
+    <p key={thing}>{thing}</p>
+    )
+    
+    return(
+        <div className="container-content">
+           <div className="nav-content">
+           <img src={logo} className="Clicker-logo" alt="logo" />
 
-     >Click</button>
- )
-}
-
-// export default Clicker;
-
+            <p>Button Clicker</p>
+           </div>
+    <hr></hr>
+           <div className="content">
+            <button             
+            onClick={addItem}
+            className="btn-content">Add Item</button>
+            <div className="added-content">
+          {elementsArray}
+             </div>
+           </div>
+        </div>
+    )
+    }
+export default Clicker;
